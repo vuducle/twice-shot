@@ -1,13 +1,10 @@
-import React from "react";
-
 type ImageTwiceProps = {
   url: any;
   desc?: any;
   alt: any;
 };
 
-const Image: React.FunctionComponent<ImageTwiceProps> = (props) => {
-  const { url, desc } = props;
+const Image = ({ url, desc }: ImageTwiceProps) => {
   return (
     <li>
       <img src={url} alt={desc} />

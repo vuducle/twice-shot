@@ -27,3 +27,5 @@ const Gallery = (props: any) => {
     </div>
   );
 };
+
+export default Gallery;
