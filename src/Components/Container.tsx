@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { PhotoContext } from "../utils/PhotoProvider";
 import Loader from "./Loader";
 
-function Container(searchTerm: any) {
+function Container({ searchTerm }: any) {
   const { images, loading, runSearch } = useContext(PhotoContext);
 
   useEffect(() => {
@@ -15,3 +15,5 @@ function Container(searchTerm: any) {
     </>
   );
 }
+
+export default Container;
