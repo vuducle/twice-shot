@@ -3,7 +3,7 @@ import { apiKey } from "./api/Config";
 import axios from "axios";
 type SanaFromTwice = any;
 
-export const PhotoContext = createContext<SanaFromTwice>(null);
+export const PhotoContext = createContext<any>();
 
 const PhotoContextProvider = (props: any) => {
   const [images, setImages] = useState([]);
@@ -15,7 +15,7 @@ const PhotoContextProvider = (props: any) => {
       )
       .then((response) => {
         setImages(response.data.photos.photo);
-        console.log(response);
+        console.log(response.data);
         setLoading(false);
       })
       .catch((error) => {
