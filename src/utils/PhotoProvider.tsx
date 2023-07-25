@@ -1,9 +1,8 @@
 import React, { createContext, useState } from "react";
 import { apiKey } from "./api/Config";
 import axios from "axios";
-type SanaFromTwice = any;
 
-export const PhotoContext = createContext<any>();
+export const PhotoContext = createContext<any>(null);
 
 const PhotoContextProvider = (props: any) => {
   const [images, setImages] = useState([]);

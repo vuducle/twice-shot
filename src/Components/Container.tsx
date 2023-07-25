@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { PhotoContext } from "../utils/PhotoProvider";
 import Loader from "./Loader";
+import Gallery from "./Gallery";
 
 function Container({ searchTerm }: any) {
   const { images, loading, runSearch } = useContext(PhotoContext);
@@ -11,7 +12,9 @@ function Container({ searchTerm }: any) {
 
   return (
     <>
-      <div className="photo-container">{loading ? <Loader /> : images}</div>
+      <div className="photo-container">
+        {loading ? <Loader /> : <Gallery data={images} />}
+      </div>
     </>
   );
 }

@@ -14,6 +14,7 @@ import Search from "./Components/Search";
 import NotFound from "./Components/NotFound";
 
 function App(props: any) {
+  console.log(props);
   const navigate = useNavigate();
   function handleTwiceSubmit(e: any, history: any, searchInput: string) {
     e.preventDefault();
