@@ -30,17 +30,20 @@ function App(props: any) {
           <Header handleSubmit={handleTwiceSubmit} history={props.history} />
           <Routes>
             <Route path="/" element={<Navigate to="/javascript" />} />
-            <Route path="/vietnam" element={<Item searchInput="vietnam" />} />
             <Route
-              path="/south-korea"
+              path="/:searchInput"
+              element={<Item searchInput="vietnam" />}
+            />
+            <Route
+              path="/:searchInput"
               element={<Item searchInput="south-korea" />}
             />
             <Route
-              path="/singapore"
+              path="/:searchInput"
               element={<Item searchInput="singapore" />}
             />
             <Route
-              path="/javascript"
+              path="/:searchInput"
               element={<Item searchInput="javascript" />}
             />
             <Route path="/search/:searchInput" element={<Search />} />

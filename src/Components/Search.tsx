@@ -1,6 +1,6 @@
 import Container from "./Container";
 import { useLocation, useParams } from "react-router-dom";
-const Search = ({ searchTerm }: any) => {
+const Search = () => {
   const location = useParams();
   console.log(location);
 
